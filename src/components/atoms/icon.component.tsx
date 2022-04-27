@@ -9,7 +9,7 @@ import MoreOption from '../../../assets/svg/more-option.svg';
 const DEFAULT_ICON_SIZE = 20;
 
 type Props = {
-  name: IconList;
+  name?: IconList;
   width?: number;
   height?: number;
 }
