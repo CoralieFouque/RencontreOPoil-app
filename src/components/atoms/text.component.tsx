@@ -14,11 +14,11 @@ type Props = {
 
 const Text: FunctionComponent<Props> = (props: Props) => {
   return (
-    <RNText lineBreakMode='clip' style={[{ 
-      fontFamily: props.font ?? Fonts.OutfitRegular, 
-      fontSize: props.size ?? Theme.default.text_size, 
-      color: props.color ?? Theme.default.white, 
-      opacity: props.opacity}, 
+    <RNText lineBreakMode='clip' style={[{
+      fontFamily: props.font ?? Fonts.OutfitRegular,
+      fontSize: props.size ?? Theme.default.text_size,
+      color: props.color ?? Theme.default.font_color,
+      opacity: props.opacity},
       props.style]}
     >
       {props.children}
