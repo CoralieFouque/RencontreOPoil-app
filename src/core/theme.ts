@@ -22,6 +22,7 @@ const Theme = {
         button_border_radius: 15,
         text_size: 16,
         button_text_size: 20,
+        minimum_height: 66,
     },
 }; 
 
