@@ -6,10 +6,11 @@ const InputStyle = StyleSheet.create({
     borderRadius: Theme.default.input_border_radius,
     borderColor: Theme.default.border_color,
     borderWidth: 1,
-    height: Theme.default.minimum_height,
+    minHeight: Theme.default.minimum_height,
     paddingVertical: 12,
     paddingHorizontal: 20,
     marginVertical: 5,
+    width:'100%'
   },
   inputText: {
     color: Theme.default.black,
