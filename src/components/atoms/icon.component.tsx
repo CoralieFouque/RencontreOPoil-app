@@ -6,13 +6,12 @@ import LeftArrow from '../../../assets/svg/left-arrow.svg';
 import MoreOption from '../../../assets/svg/more-option.svg';
 
 
-const DEFAULT_ICON_SIZE = 28;
+const DEFAULT_ICON_SIZE = 20;
 
 type Props = {
   name: IconList;
   width?: number;
   height?: number;
-
 }
 
 const Icon : FunctionComponent<Props> = (props: Props) => {
