@@ -17,6 +17,7 @@ const Theme = {
         error: 'red',
 
         input_border_radius: 8,
+        text_size: 16,
     },
 }; 
 
