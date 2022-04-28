@@ -55,7 +55,7 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
 
     // ACTIVE
     case 'active_blog': return <ActiveBlog height={ getHeight() } width={ getWidth() } />; break;
-    case 'active_blog': return <ActiveHome height={ getHeight() } width={ getWidth() } />; break;
+    case 'active_home': return <ActiveHome height={ getHeight() } width={ getWidth() } />; break;
     case 'active_profil': return <ActiveProfil height={ getHeight() } width={ getWidth() } />; break;
     case 'active_notification': return <ActiveNotification height={ getHeight() } width={ getWidth() } />; break;
     // LOGO

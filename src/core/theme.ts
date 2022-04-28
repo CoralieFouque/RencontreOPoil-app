@@ -8,7 +8,7 @@ const Theme = {
         font_secondary: Fonts.PoppinsRegular,
 
         // COLORS
-        primary : '#E3634B', // orange
+        primary : '#E4634B', // orange
         secondary : '#1C393A', //green
         light: '#D4D6CB',
         white: '#FFFFFF',
