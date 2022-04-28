@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactChild } from 'react';
 import { Pressable } from 'react-native';
 import Theme from '../../core/theme';
 import ButtonStyle from '../../styles/components/molecules/button.style';
 import Text from '../atoms/text.component';
 
 type Props = {
-  children?: ChildNode,
+  children?: ReactChild,
   disable?: boolean;
   onPress?: () => void;
 }

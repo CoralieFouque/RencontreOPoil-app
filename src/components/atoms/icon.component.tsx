@@ -9,6 +9,8 @@ import LogoCouleur from '../../../assets/svg/logo-couleur.svg';
 import Blog from '../../../assets/svg/blog.svg';
 import Home from '../../../assets/svg/home.svg';
 import Notification from '../../../assets/svg/notification.svg';
+import Menu from '../../../assets/svg/dots-menu.svg';
+import Back from '../../../assets/svg/arrow-left.svg';
 
 // GREEN
 import ActiveBlog from '../../../assets/svg/active-blog.svg';
@@ -52,6 +54,8 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
     case 'blog': return <Blog height={ getHeight() } width={ getWidth() } />; break;
     case 'home': return <Home height={ getHeight() } width={ getWidth() } />; break;
     case 'notification': return <Notification height={ getHeight() } width={ getWidth() } />; break;
+    case 'menu': return <Menu height={ getHeight() } width={ getWidth() } />; break;
+    case 'back': return <Back height={ getHeight() } width={ getWidth() } />; break;
 
     // ACTIVE
     case 'active_blog': return <ActiveBlog height={ getHeight() } width={ getWidth() } />; break;
