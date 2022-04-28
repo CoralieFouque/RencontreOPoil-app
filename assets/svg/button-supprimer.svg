@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67.918" height="67.918" viewBox="0 0 67.918 67.918">
+  <defs>
+    <filter id="Tracé_290" x="0" y="0" width="67.918" height="67.918" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Supprimer" transform="translate(9 6)">
+    <g id="_" data-name="+" transform="translate(-285.185 -607)">
+      <g transform="matrix(1, 0, 0, 1, 276.19, 601)" filter="url(#Tracé_290)">
+        <path id="Tracé_290-2" data-name="Tracé 290" d="M24.959,0A24.959,24.959,0,1,1,0,24.959,24.959,24.959,0,0,1,24.959,0Z" transform="translate(9 6)" fill="#1c393a"/>
+      </g>
+    </g>
+    <path id="Tracé_1105" data-name="Tracé 1105" d="M1288,397v20" transform="translate(-1173.587 647.92) rotate(-45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <path id="Tracé_1106" data-name="Tracé 1106" d="M0,0V20" transform="translate(17.888 32.03) rotate(-135)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>
