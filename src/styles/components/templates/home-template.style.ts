@@ -5,7 +5,9 @@ const HomeStyle = StyleSheet.create({
 		flexDirection: 'column',
 		height: Dimensions.get('screen').height - Platform.select({android: StatusBar.currentHeight, default: 0}),
 		width:'100%',
-		position: 'relative', marginTop: 50,
+		position: 'relative',
+		paddingBottom: 15,
+		marginTop: 50,
 	},
 	subContainer: {
 		flex: 1,
