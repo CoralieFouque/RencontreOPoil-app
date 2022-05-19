@@ -9,14 +9,24 @@ const NavbarComponentStyle = StyleSheet.create({
   topContainer: {
     height: 33,
     width: '100%',
-    borderBottomColor: Theme.default.primary,
+    borderBottomColor: 'rgba(228, 99, 75, 0.4)',
     borderBottomWidth: 1,
+    shadowOffset:{
+      height:30,
+      width:0
+    },
+    shadowColor: 'blue',
+    shadowOpacity: 1
+    
+    
+    
   },
   subContainer: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'stretch',
+    justifyContent:'center',
+    alignItems: 'center',
+
   },
   pressableIcon: {
     flexGrow: 1,
