@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 50 38" style="enable-background:new 0 0 50 38;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#103A3A;}
-	.st1{font-family:'Outfit-Bold';}
-	.st2{font-size:30px;}
-</style>
-<text transform="matrix(1 0 0 1 12.236 30)" class="st0 st1 st2">...</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="6" viewBox="0 0 22 6">
+  <g id="Groupe_930" data-name="Groupe 930" transform="translate(-341 -66)">
+    <circle id="Ellipse_294" data-name="Ellipse 294" cx="3" cy="3" r="3" transform="translate(341 66)"/>
+    <circle id="Ellipse_295" data-name="Ellipse 295" cx="3" cy="3" r="3" transform="translate(349 66)"/>
+    <circle id="Ellipse_296" data-name="Ellipse 296" cx="3" cy="3" r="3" transform="translate(357 66)"/>
+  </g>
 </svg>

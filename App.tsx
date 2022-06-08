@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { RootStackParamList } from './src/root-stack-param-list';
+import { useFonts } from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/pages/home.page';
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
+  const [loaded] = useFonts({
+    //Outfit
+    'Outfit-Regular': require('./assets/fonts/Outfit/Outfit-Regular.ttf'),
+    //Poppins
+    'Poppins-Regular': require('./assets/fonts/Poppins/Poppins-Regular.ttf'),
+    'Poppins-SemiBold': require('./assets/fonts/Poppins/Poppins-SemiBold.ttf')
+  });
+
+
+  if(!loaded) return null;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen
+          name='Home'
+          component={Home}
+          options={{ headerShown: false }}
+        />
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

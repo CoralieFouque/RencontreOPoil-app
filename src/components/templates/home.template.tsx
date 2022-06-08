@@ -11,11 +11,9 @@ type Props = {
   footer?: boolean;
   leftIcon?: IconList;
   rightIcon?: IconList;
-  active?: IconList;
   title?: string;
   onPressRightIcon?: () => void;
   onPressLeftIcon?: () => void;
-  onMenuItemPressed?: () => void;
 }
 
 const HomeTemplate : FunctionComponent<Props> = (props : Props) => {
@@ -34,9 +32,7 @@ const HomeTemplate : FunctionComponent<Props> = (props : Props) => {
         {props.children}
       </View>
       { props.footer &&
-        <Navbar
-          active={props.active} onPress={props.onMenuItemPressed}
-        />
+        <Navbar/>
       }
     </SafeAreaView>
   );

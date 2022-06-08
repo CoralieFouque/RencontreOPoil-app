@@ -11,12 +11,18 @@ const NavbarComponentStyle = StyleSheet.create({
     width: '100%',
     borderBottomColor: Theme.default.primary,
     borderBottomWidth: 1,
+    shadowOffset:{
+      height:30,
+      width:0
+    },
+    shadowColor: 'blue',
+    shadowOpacity: 1,
   },
   subContainer: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
     alignItems: 'stretch',
+    justifyContent:'center',
   },
   pressableIcon: {
     flexGrow: 1,

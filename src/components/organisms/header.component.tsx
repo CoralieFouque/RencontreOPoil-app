@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Pressable, View } from 'react-native';
+import Theme from '../../core/theme';
 import IconList from '../../core/types/icon-list.type';
 import HeaderStyle from '../../styles/components/organisms/header.style';
 import Icon from '../atoms/icon.component';
@@ -19,7 +20,7 @@ const Header : FunctionComponent<Props> = (props: Props) => {
       <View style={HeaderStyle.iconContainer}>
         { props.leftIcon && 
           <Pressable onPress={props.onPressLeftIcon}>
-            <Icon name={props.leftIcon} />
+            <Icon name={props.leftIcon} fill={Theme.default.secondary}/>
           </Pressable>
         }
       </View>
@@ -29,7 +30,7 @@ const Header : FunctionComponent<Props> = (props: Props) => {
       <View style={HeaderStyle.iconContainer}>
         { props.rightIcon &&
           <Pressable onPress={props.onPressRightIcon}>
-            <Icon name={props.rightIcon} />
+            <Icon name={props.rightIcon} fill={Theme.default.secondary}/>
           </Pressable>
         }
       </View>

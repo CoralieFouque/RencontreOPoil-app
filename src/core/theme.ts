@@ -5,11 +5,13 @@ const Theme = {
         // FONTS
         font_primary: Fonts.OutfitRegular,
         font_primary_semibold: Fonts.OutfitSemiBold,
-        font_secondary: Fonts.PoppinsRegular,
+        font_poppins: Fonts.PoppinsRegular,
+        font_poppins_semibold: Fonts.PoppinsSemiBold,
 
         // COLORS
         primary : '#E4634B', // orange
         secondary : '#1C393A', //green
+        tertiary : '#CE7153', //brown   
         light: '#D4D6CB',
         white: '#FFFFFF',
         black: '#000000',
