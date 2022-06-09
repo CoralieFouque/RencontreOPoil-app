@@ -15,7 +15,7 @@ import Back from '../../../assets/svg/arrow-left.svg';
 import Theme from '../../core/theme';
 
 const DEFAULT_ICON_SIZE = 25;
-const DEFAULT_ICON_FILL = Theme.default.primary;
+const DEFAULT_ICON_FILL = Theme.default.orange;
 
 type Props = {
   name?: IconList;
