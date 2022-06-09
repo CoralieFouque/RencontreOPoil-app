@@ -12,20 +12,16 @@ import Notification from '../../../assets/svg/notification.svg';
 import Menu from '../../../assets/svg/dots-menu.svg';
 import Back from '../../../assets/svg/arrow-left.svg';
 
-// GREEN
-import ActiveBlog from '../../../assets/svg/active-blog.svg';
-import ActiveHome from '../../../assets/svg/active-home.svg';
-import ActiveProfil from '../../../assets/svg/active-profil.svg';
-import ActiveNotification from '../../../assets/svg/active-notification.svg';
-
-
+import Theme from '../../core/theme';
 
 const DEFAULT_ICON_SIZE = 25;
+const DEFAULT_ICON_FILL = Theme.default.primary;
 
 type Props = {
   name?: IconList;
   width?: number;
   height?: number;
+  fill?: string;
 }
 
 const Icon : FunctionComponent<Props> = (props: Props) => {
@@ -44,26 +40,25 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
     return props.height ?? DEFAULT_ICON_SIZE;
   }
 
+  function getFill(): string {
+    return props.fill ?? DEFAULT_ICON_FILL;
+  }
+
   /**
    * Return an icon
    * @returns {JSX.Element} icon
    */
   function getIcon(): JSX.Element{
     switch (props.name){
-    case 'profil': return <Profil height={ getHeight() } width={ getWidth() } />; break;
-    case 'blog': return <Blog height={ getHeight() } width={ getWidth() } />; break;
-    case 'home': return <Home height={ getHeight() } width={ getWidth() } />; break;
-    case 'notification': return <Notification height={ getHeight() } width={ getWidth() } />; break;
-    case 'menu': return <Menu height={ getHeight() } width={ getWidth() } />; break;
-    case 'back': return <Back height={ getHeight() } width={ getWidth() } />; break;
+    case 'profil': return <Profil height={ getHeight() } width={ getWidth() } fill={getFill()} />; break;
+    case 'blog': return <Blog height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'home': return <Home height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'notification': return <Notification height={ getHeight() } width={ getWidth() } fill={getFill()} />; break;
+    case 'menu': return <Menu height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'back': return <Back height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
 
-    // ACTIVE
-    case 'active_blog': return <ActiveBlog height={ getHeight() } width={ getWidth() } />; break;
-    case 'active_home': return <ActiveHome height={ getHeight() } width={ getWidth() } />; break;
-    case 'active_profil': return <ActiveProfil height={ getHeight() } width={ getWidth() } />; break;
-    case 'active_notification': return <ActiveNotification height={ getHeight() } width={ getWidth() } />; break;
     // LOGO
-    case 'logo_couleur': return <LogoCouleur height={ getHeight() } width={ getWidth() } />; break;
+    case 'logo_couleur': return <LogoCouleur height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     default : return <View/>;
     }
   }

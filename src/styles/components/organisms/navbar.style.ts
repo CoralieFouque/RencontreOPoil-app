@@ -16,16 +16,13 @@ const NavbarComponentStyle = StyleSheet.create({
       width:0
     },
     shadowColor: 'blue',
-    shadowOpacity: 1
-    
-    
-    
+    shadowOpacity: 1,
   },
   subContainer: {
     flex: 1,
     flexDirection: 'row',
+    alignItems: 'stretch',
     justifyContent:'center',
-    alignItems: 'center',
 
   },
   pressableIcon: {

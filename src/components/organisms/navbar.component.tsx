@@ -1,24 +1,30 @@
+import { NavigationProp, RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import React, { FunctionComponent } from 'react';
-import { Pressable, StyleProp, View, ViewStyle } from 'react-native';
-import IconList from '../../core/types/icon-list.type';
+import { Pressable, View } from 'react-native';
+import Theme from '../../core/theme';
+import { RootStackParamList } from '../../root-stack-param-list';
 import NavbarComponentStyle from '../../styles/components/organisms/navbar.style';
 import Icon from '../atoms/icon.component';
 
-type Props = {
-  active?: IconList;
-  style?: StyleProp<ViewStyle>;
-  onPress?: (button: IconList) => void;
-}
 
-const Navbar: FunctionComponent<Props> = (props: Props) => {
-  
+const Navbar: FunctionComponent = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const route = useRoute<RouteProp<RootStackParamList>>();
+ 
   /**
    * Function triggered when one of the buttons is pressed.
-   * @param {NavbarIcons} button The button that was pressed. 
+   * @param {'Home' | 'Blog' | 'Notification' | 'Profil'} button The button that was pressed. 
    */
-  function onPress(button: IconList): void {
-    if (props.onPress) {
-      props.onPress(button);
+  function onMenuItemPressed(button: 'Home' | 'Blog' | 'Notification' | 'Profil'): void {
+    switch(button){
+      case 'Home': 
+      if(route.name === 'Home') return;  
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Home'}],
+      });
+      break;
+      default: break;
     }
   }
 
@@ -29,33 +35,23 @@ const Navbar: FunctionComponent<Props> = (props: Props) => {
           <Icon name='logo_couleur' height={78} width={78}/>
         </View>
       </View>
-      <View style={ [NavbarComponentStyle.subContainer, props.style] }>
-        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onPress('home') }>
-          <Icon
-            name={ props.active === 'home' ? 'active_home' : 'home' }
-          />
+      <View style={NavbarComponentStyle.subContainer}>
+        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Home') }>
+          <Icon name='home' fill={ route.name === 'Home' ? Theme.default.secondary : undefined } />
         </Pressable>
 
-        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onPress('blog') }>
-          <Icon
-            name={ props.active === 'blog' ? 'active_blog' : 'blog' }
-          />
+        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Blog') }>
+          <Icon name='blog' fill={ route.name === 'Home' ? Theme.default.secondary : undefined }/>
         </Pressable>
 
-        <View style={ NavbarComponentStyle.innerContainer } >
+        <View style={ NavbarComponentStyle.innerContainer }/>
 
-        </View>
-
-        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onPress('notification') }>
-          <Icon
-            name={ props.active === 'notification' ? 'active_notification' : 'notification' }
-          />
+        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Notification') }>
+          <Icon name='notification' fill={ route.name === 'Home' ? Theme.default.secondary : undefined }/>
         </Pressable>
         
-        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onPress('profil') }>
-          <Icon
-            name={ props.active === 'profil' ? 'active_profil' : 'profil' }
-          />
+        <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Profil') }>
+          <Icon name='profil' fill={ route.name === 'Home' ? Theme.default.secondary : undefined }/>
         </Pressable>
       </View>
     </View>

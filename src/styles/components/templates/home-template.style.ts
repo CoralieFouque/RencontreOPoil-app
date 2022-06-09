@@ -6,12 +6,13 @@ const HomeStyle = StyleSheet.create({
 		height: Dimensions.get('screen').height - Platform.select({android: StatusBar.currentHeight, default: 0}),
 		width:'100%',
 		position: 'relative',
-		paddingBottom: 15,
+		paddingBottom: 32,
 		marginTop: 50,
 	},
 	subContainer: {
 		flex: 1,
 		width: '100%',
+		alignItems: 'center'
 	}
 });
 

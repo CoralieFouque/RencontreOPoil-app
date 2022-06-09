@@ -5,6 +5,7 @@ enum Fonts {
 
   //POPPINS
   PoppinsRegular = 'Poppins-Regular',
+  PoppinsSemiBold = 'Poppins-SemiBold',
 }
 
 export default Fonts;
