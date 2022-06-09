@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { View } from 'react-native';
+import TabviewStyle from '../../styles/components/organisms/tabview.style';
 import Tab from '../molecules/tab.component';
 type Props = {
   tabsNames: string[];
@@ -22,7 +23,7 @@ const Tabview : FunctionComponent<Props> = (props : Props) => {
     }
   
     return (
-      <View style={{ flexDirection: 'row', width:'100%', paddingHorizontal: 50, justifyContent: 'space-around' }}>
+      <View style={TabviewStyle.container}>
         {displayTabs()}
       </View>
     );
