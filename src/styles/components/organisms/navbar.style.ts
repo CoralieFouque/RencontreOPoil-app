@@ -9,7 +9,7 @@ const NavbarComponentStyle = StyleSheet.create({
   topContainer: {
     height: 33,
     width: '100%',
-    borderBottomColor: Theme.default.primary,
+    borderBottomColor: 'rgba(228, 99, 75, 0.4)',
     borderBottomWidth: 1,
     shadowOffset:{
       height:30,
@@ -23,6 +23,7 @@ const NavbarComponentStyle = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'stretch',
     justifyContent:'center',
+
   },
   pressableIcon: {
     flexGrow: 1,
