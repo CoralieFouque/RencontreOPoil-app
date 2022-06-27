@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactChild, ReactNode } from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView, View, ViewStyle } from 'react-native';
 import IconList from '../../core/types/icon-list.type';
 import HomeStyle from '../../styles/components/templates/home-template.style';
 import Header from '../organisms/header.component';
@@ -12,6 +12,7 @@ type Props = {
   leftIcon?: IconList;
   rightIcon?: IconList;
   title?: string;
+  headerStyle?: ViewStyle;
   onPressRightIcon?: () => void;
   onPressLeftIcon?: () => void;
 }
@@ -26,6 +27,7 @@ const HomeTemplate : FunctionComponent<Props> = (props : Props) => {
           title={props.title}
           onPressLeftIcon={props.onPressLeftIcon}
           onPressRightIcon={props.onPressRightIcon}
+          style={props.headerStyle}          
         />
       }
       <View style={HomeStyle.subContainer}>

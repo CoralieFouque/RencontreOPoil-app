@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './src/pages/home.page';
 import Profil from './src/pages/profil.page';
+import Match from './src/pages/match.page';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -31,6 +32,11 @@ export default function App() {
         <Stack.Screen
           name='Profil'
           component={Profil}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name='Match'
+          component={Match}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

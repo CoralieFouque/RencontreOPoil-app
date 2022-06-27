@@ -1,11 +1,17 @@
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { FunctionComponent } from 'react';
 import { View } from 'react-native';
 import Text from '../components/atoms/text.component';
 import Button from '../components/molecules/button.component';
 import HomeTemplate from '../components/templates/home.template';
 import Theme from '../core/theme';
+import { RootStackParamList } from '../root-stack-param-list';
 
-const Home : FunctionComponent = () => {
+type Props = {
+  navigation : NativeStackNavigationProp<RootStackParamList, 'Home'>;
+}
+
+const Home : FunctionComponent<Props> = (props: Props) => {
   return(
     <HomeTemplate
       footer
@@ -17,7 +23,7 @@ const Home : FunctionComponent = () => {
         <Text size={25} >Ils ont besoin de toi ...</Text>
         <View style={{ backgroundColor:'lightgrey', height:356, width:256, borderRadius:15 }}/>
         <View style={{ backgroundColor:'grey', height:13, width:100, borderRadius:15 }}/>
-        <Button style={{ width:205 }}>Commencer</Button>
+        <Button style={{ width:205 }} onPress={() => props.navigation.navigate('Match') }>Commencer</Button>
       </View>
     </HomeTemplate>
     

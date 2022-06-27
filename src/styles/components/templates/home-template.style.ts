@@ -8,6 +8,7 @@ const HomeStyle = StyleSheet.create({
 		position: 'relative',
 		paddingBottom: 32,
 		marginTop: 50,
+		backgroundColor: 'white'
 	},
 	subContainer: {
 		flex: 1,

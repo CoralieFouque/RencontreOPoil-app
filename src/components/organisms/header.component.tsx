@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Pressable, View } from 'react-native';
+import { Pressable, View, ViewStyle } from 'react-native';
 import Theme from '../../core/theme';
 import IconList from '../../core/types/icon-list.type';
 import HeaderStyle from '../../styles/components/organisms/header.style';
@@ -10,13 +10,14 @@ type Props = {
   leftIcon?: IconList;
   rightIcon?: IconList;
   title?: string;
+  style?: ViewStyle;
   onPressLeftIcon?: () => void;
   onPressRightIcon?: () => void;
 }
 
 const Header : FunctionComponent<Props> = (props: Props) => {
   return (
-    <View style={HeaderStyle.container}>
+    <View style={[HeaderStyle.container, props.style]}>
       <View style={HeaderStyle.iconContainer}>
         { props.leftIcon && 
           <Pressable onPress={props.onPressLeftIcon}>
