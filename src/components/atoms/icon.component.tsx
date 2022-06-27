@@ -12,6 +12,8 @@ import Notification from '../../../assets/svg/notification.svg';
 import Menu from '../../../assets/svg/dots-menu.svg';
 import Back from '../../../assets/svg/arrow-left.svg';
 import ArrowRight from '../../../assets/svg/arrow-right.svg';
+import Cross from '../../../assets/svg/cross.svg';
+import Plus from '../../../assets/svg/plus.svg';
 
 import Theme from '../../core/theme';
 
@@ -58,6 +60,8 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
     case 'menu': return <Menu height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'back': return <Back height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'arrow-right': return <ArrowRight height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'cross' : return <Cross height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'plus': return <Plus height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
 
     // LOGO
     case 'logo_couleur': return <LogoCouleur height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;

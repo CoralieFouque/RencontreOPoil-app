@@ -2,7 +2,7 @@ type IconList = 'profil' | 'more_option' | 'blog' | 'notification' | 'home' | 'm
                 // ACTIVE
                 'active_home' | 'active_blog' | 'active_notification' | 'active_profil' | 
                 // LOGO
-                'logo_couleur' | 'arrow-right';
+                'logo_couleur' | 'arrow-right' | 'cross' | 'plus';
 
 
 export default IconList;
