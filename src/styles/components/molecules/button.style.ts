@@ -3,7 +3,7 @@ import Theme from '../../../core/theme';
 
 const ButtonStyle = StyleSheet.create({
   container: {
-    backgroundColor: Theme.default.secondary,
+    backgroundColor: Theme.default.green,
     height: Theme.default.minimum_height, 
     width:'100%',
     alignItems: 'center',

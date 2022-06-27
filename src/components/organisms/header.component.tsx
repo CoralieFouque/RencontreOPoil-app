@@ -20,7 +20,7 @@ const Header : FunctionComponent<Props> = (props: Props) => {
       <View style={HeaderStyle.iconContainer}>
         { props.leftIcon && 
           <Pressable onPress={props.onPressLeftIcon}>
-            <Icon name={props.leftIcon} fill={Theme.default.secondary}/>
+            <Icon name={props.leftIcon} fill={Theme.default.green}/>
           </Pressable>
         }
       </View>
@@ -30,7 +30,7 @@ const Header : FunctionComponent<Props> = (props: Props) => {
       <View style={HeaderStyle.iconContainer}>
         { props.rightIcon &&
           <Pressable onPress={props.onPressRightIcon}>
-            <Icon name={props.rightIcon} fill={Theme.default.secondary}/>
+            <Icon name={props.rightIcon} fill={Theme.default.green}/>
           </Pressable>
         }
       </View>

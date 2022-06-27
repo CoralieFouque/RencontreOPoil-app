@@ -11,10 +11,11 @@ import Home from '../../../assets/svg/home.svg';
 import Notification from '../../../assets/svg/notification.svg';
 import Menu from '../../../assets/svg/dots-menu.svg';
 import Back from '../../../assets/svg/arrow-left.svg';
+import ArrowRight from '../../../assets/svg/arrow-right.svg';
 
 import Theme from '../../core/theme';
 
-const DEFAULT_ICON_SIZE = 25;
+const DEFAULT_ICON_SIZE = 20;
 const DEFAULT_ICON_FILL = Theme.default.orange;
 
 type Props = {
@@ -56,6 +57,7 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
     case 'notification': return <Notification height={ getHeight() } width={ getWidth() } fill={getFill()} />; break;
     case 'menu': return <Menu height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'back': return <Back height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'arrow-right': return <ArrowRight height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
 
     // LOGO
     case 'logo_couleur': return <LogoCouleur height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;

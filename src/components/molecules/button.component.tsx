@@ -15,7 +15,7 @@ type Props = {
 const Button : FunctionComponent<Props> = (props: Props) => {
   return (
     <Pressable style={[ButtonStyle.container, props.style]} onPress={props.onPress} disabled={props.disable}>
-      <Text size={Theme.default.button_text_size} color={Theme.default.button_text_color}>
+      <Text size={Theme.default.button_text_size} color={Theme.default.white}>
         {props.children}
       </Text>
     </Pressable>

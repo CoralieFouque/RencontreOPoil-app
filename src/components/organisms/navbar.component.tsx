@@ -24,6 +24,12 @@ const Navbar: FunctionComponent = () => {
         routes: [{ name: 'Home'}],
       });
       break;
+      case 'Profil': 
+      if(route.name === 'Profil') return;
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Profil'}],
+      }); break;
       default: break;
     }
   }
@@ -37,21 +43,21 @@ const Navbar: FunctionComponent = () => {
       </View>
       <View style={NavbarComponentStyle.subContainer}>
         <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Home') }>
-          <Icon name='home' fill={ route.name === 'Home' ? Theme.default.secondary : undefined } />
+          <Icon name='home' height={25} width={25} fill={ route.name === 'Home' ? Theme.default.green : undefined } />
         </Pressable>
 
         <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Blog') }>
-          <Icon name='blog' fill={ route.name === 'Home' ? Theme.default.secondary : undefined }/>
+          <Icon name='blog' height={25} width={25} fill={ route.name === 'Home' ? Theme.default.green : undefined }/>
         </Pressable>
 
         <View style={ NavbarComponentStyle.innerContainer }/>
 
         <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Notification') }>
-          <Icon name='notification' fill={ route.name === 'Home' ? Theme.default.secondary : undefined }/>
+          <Icon name='notification' height={25} width={25} fill={ route.name === 'Home' ? Theme.default.green : undefined }/>
         </Pressable>
         
         <Pressable style={ NavbarComponentStyle.pressableIcon } onPress={ (): void => onMenuItemPressed('Profil') }>
-          <Icon name='profil' fill={ route.name === 'Home' ? Theme.default.secondary : undefined }/>
+          <Icon name='profil' height={25} width={25} fill={ route.name === 'Profil' ? Theme.default.green : undefined }/>
         </Pressable>
       </View>
     </View>

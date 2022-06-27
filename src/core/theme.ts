@@ -13,10 +13,12 @@ const Theme = {
         green : '#1C393A', //green
         brown : '#CE7153', //brown   
         grey: '#D4D6CB',
+        dark_grey : '#707070',
         white: '#FFFFFF',
         black: '#000000',
         error: 'red',
         border_color: '#CDD4D9', //light grey
+
 
         input_border_radius: 8,
         button_border_radius: 15,
