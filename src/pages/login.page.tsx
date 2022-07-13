@@ -51,7 +51,7 @@ const Login : FunctionComponent<Props> = (props: Props) => {
 
   function onPressConnect(): void {
     setIsLoading(true);
-    if(formData.mail.value === 'coco@mail.com' && formData.password.value === '111') {
+    if(formData.mail.value.trim().toLowerCase() === 'coco@mail.com' && formData.password.value === '111') {
       setIsLoading(false);
       setCanLog(true);
       props.navigation.replace('Home');
