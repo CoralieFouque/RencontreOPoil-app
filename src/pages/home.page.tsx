@@ -19,7 +19,7 @@ const Home : FunctionComponent<Props> = (props: Props) => {
   const [animal, setAnimal] = useState<Animal | undefined>();
 
   function fetchOne() : void {
-    fetch('http://192.168.255.12:3001/animal/sos')
+    fetch('http://192.168.1.38:3001/animal/sos')
       .then((res) => res.json())
       .then((data) => setAnimal(data))
   }
