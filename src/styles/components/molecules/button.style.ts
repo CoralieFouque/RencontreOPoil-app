@@ -7,8 +7,9 @@ const ButtonStyle = StyleSheet.create({
     height: Theme.default.minimum_height, 
     width:'100%',
     alignItems: 'center',
-    justifyContent:'center',
+    justifyContent:'space-evenly',
     borderRadius: Theme.default.button_border_radius,
+    flexDirection: 'row',
   }
 });
 

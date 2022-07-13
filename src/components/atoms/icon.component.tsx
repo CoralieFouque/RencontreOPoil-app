@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import { View } from 'react-native';
 import IconList from '../../core/types/icon-list.type';
+import Theme from '../../core/theme';
 
 // import LeftArrow from '../../../assets/svg/left-arrow.svg';
 // import MoreOption from '../../../assets/svg/more-option.svg';
 import Profil from '../../../assets/svg/profil.svg';
-import LogoCouleur from '../../../assets/svg/logo-couleur.svg';
 import Blog from '../../../assets/svg/blog.svg';
 import Home from '../../../assets/svg/home.svg';
 import Notification from '../../../assets/svg/notification.svg';
@@ -14,8 +14,14 @@ import Back from '../../../assets/svg/arrow-left.svg';
 import ArrowRight from '../../../assets/svg/arrow-right.svg';
 import Cross from '../../../assets/svg/cross.svg';
 import Plus from '../../../assets/svg/plus.svg';
+import Sos from '../../../assets/svg/sos.svg';
+import Heart from '../../../assets/svg/heart.svg';
 
-import Theme from '../../core/theme';
+//LOGO
+import LogoSombre from '../../../assets/svg/logo-sombre.svg';
+import LogoCouleur from '../../../assets/svg/logo-couleur.svg';
+import LogoBlanc from '../../../assets/svg/logo-blanc.svg';
+
 
 const DEFAULT_ICON_SIZE = 20;
 const DEFAULT_ICON_FILL = Theme.default.orange;
@@ -62,9 +68,13 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
     case 'arrow-right': return <ArrowRight height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'cross' : return <Cross height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'plus': return <Plus height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'sos': return <Sos height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'heart': return <Heart height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
 
     // LOGO
-    case 'logo_couleur': return <LogoCouleur height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'logo_couleur': return <LogoCouleur height={ getHeight() } width={ getWidth() }/>; break;
+    case 'logo_sombre': return <LogoSombre height={ getHeight() } width={ getWidth() }/>; break;
+    case 'logo-blanc':  return <LogoBlanc height={ getHeight() } width={ getWidth() }/>; break;
     default : return <View/>;
     }
   }
