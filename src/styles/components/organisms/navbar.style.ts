@@ -6,7 +6,7 @@ const NavbarComponentStyle = StyleSheet.create({
     height: 70,
     width: '100%',
     elevation: 2,
-    shadowColor: 'red',
+    shadowColor: Theme.default.grey,
     marginTop: 33
   },
 
