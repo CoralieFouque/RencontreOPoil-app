@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactChild, ReactNode } from 'react';
-import { SafeAreaView, View, ViewStyle } from 'react-native';
+import { SafeAreaView, StatusBar, View, ViewStyle } from 'react-native';
 import IconList from '../../core/types/icon-list.type';
 import HomeStyle from '../../styles/components/templates/home-template.style';
 import Header from '../organisms/header.component';
@@ -13,21 +13,25 @@ type Props = {
   rightIcon?: IconList;
   title?: string;
   headerStyle?: ViewStyle;
+  leftIconColor?: string;
+  statusbarColor?: string;
   onPressRightIcon?: () => void;
   onPressLeftIcon?: () => void;
 }
 
 const HomeTemplate : FunctionComponent<Props> = (props : Props) => {
   return (
-    <SafeAreaView style={HomeStyle.container}>
+    <SafeAreaView style={[HomeStyle.container]}>
+      {StatusBar.setBackgroundColor(props.statusbarColor ?? 'white')}
       { props.header &&
         <Header 
           leftIcon={props.leftIcon}
+          leftIconColor={props.leftIconColor}
           rightIcon={props.rightIcon}
           title={props.title}
           onPressLeftIcon={props.onPressLeftIcon}
           onPressRightIcon={props.onPressRightIcon}
-          style={props.headerStyle}          
+          style={props.headerStyle}
         />
       }
       <View style={HomeStyle.subContainer}>

@@ -15,6 +15,7 @@ type Props = {
 const Text: FunctionComponent<Props> = (props: Props) => {
   return (
     <RNText lineBreakMode='clip' style={[{
+      textAlignVertical:'center',
       fontFamily: props.font ?? Theme.default.font_outfit,
       fontSize: props.size ?? Theme.default.text_size,
       color: props.color ?? Theme.default.black,

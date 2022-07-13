@@ -11,6 +11,7 @@ type Props = {
   rightIcon?: IconList;
   title?: string;
   style?: ViewStyle;
+  leftIconColor?: string;
   onPressLeftIcon?: () => void;
   onPressRightIcon?: () => void;
 }
@@ -21,7 +22,7 @@ const Header : FunctionComponent<Props> = (props: Props) => {
       <View style={HeaderStyle.iconContainer}>
         { props.leftIcon && 
           <Pressable onPress={props.onPressLeftIcon}>
-            <Icon name={props.leftIcon} fill={Theme.default.green}/>
+            <Icon name={props.leftIcon} fill={props.leftIconColor ?? Theme.default.brown}/>
           </Pressable>
         }
       </View>

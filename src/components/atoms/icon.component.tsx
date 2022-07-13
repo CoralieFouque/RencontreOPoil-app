@@ -16,6 +16,7 @@ import Cross from '../../../assets/svg/cross.svg';
 import Plus from '../../../assets/svg/plus.svg';
 import Sos from '../../../assets/svg/sos.svg';
 import Heart from '../../../assets/svg/heart.svg';
+import Location from '../../../assets/svg/location.svg';
 
 // PICTO
 import Food from '../../../assets/svg/picto-food.svg';
@@ -77,6 +78,8 @@ const Icon : FunctionComponent<Props> = (props: Props) => {
     case 'sos': return <Sos height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'heart': return <Heart height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'arrow-left': return <Left height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+    case 'location': return <Location height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
+     
     // PICTO
     case 'food': return <Food height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
     case 'vet': return <Vet height={ getHeight() } width={ getWidth() } fill={getFill()}/>; break;
