@@ -1,14 +1,16 @@
-import { Dimensions, Platform, StatusBar, StyleSheet } from 'react-native';
+import { Dimensions, StatusBar, StyleSheet } from 'react-native';
 
 const HomeStyle = StyleSheet.create({
 	container: {
 		flexDirection: 'column',
-		height: Dimensions.get('screen').height - Platform.select({android: StatusBar.currentHeight, default: 0}),
+		height: Dimensions.get('screen').height,
 		width:'100%',
 		position: 'relative',
-		paddingBottom: 32,
-		marginTop: 50,
+		// paddingBottom: Dimensions.get('screen').height - Dimensions.get('window').height,
+		paddingBottom: 5,
+		paddingTop: StatusBar.currentHeight,
 		backgroundColor: 'white'
+		
 	},
 	subContainer: {
 		flex: 1,
