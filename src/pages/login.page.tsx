@@ -1,7 +1,7 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useState } from "react";
 import { FunctionComponent } from "react";
-import { Dimensions, StatusBar, View, Image } from "react-native";
+import { Dimensions, StatusBar, View, Image, TouchableWithoutFeedback, Pressable, Keyboard, KeyboardAvoidingView } from "react-native";
 import Icon from "../components/atoms/icon.component";
 import Text from "../components/atoms/text.component";
 import Button from "../components/molecules/button.component";
@@ -62,30 +62,33 @@ const Login : FunctionComponent<Props> = (props: Props) => {
 
   return (
     <View style={LoginStyle.container}>
-        <Image source={require('../../assets/png/login-background.png')} style={{ width: '100%', height:'50%' }}/>
-      <View style={LoginStyle.iconContainer}>
-        <Icon name='logo-blanc' height={114} width={114}/>
-      </View>
-      <View style={LoginStyle.formContainer}>
-        {!canLog && <Text color={Theme.default.error }>Mauvais identifiant ou mot de passe</Text>}
-        <Input 
-          placeholder='Email'
-          label='Email'
-          errorLabel={formData.mail.errorLabel}
-          onChange={((t) => changeFormData('mail', t))}
-          onBlur={checkMail}
-        />
-        <View style={LoginStyle.inputContainer}>
-          <Input
-            placeholder='Mot de passe'
-            label='Mot de passe'
-            onChange={(t) => changeFormData('password', t)}
-          />
-          <Text style={LoginStyle.forgotLink} color={Theme.default.grey} size={14}>Mot de passe oublié ?</Text>
+      <KeyboardAvoidingView behavior='padding' style={{ flex:1}}>
+      <Pressable onPress={() => Keyboard.dismiss()} style={{ flex: 1 }}>
+          <Image source={require('../../assets/png/login-background.png')} style={{ width: '100%', height:'50%' }}/>
+        <View style={LoginStyle.iconContainer}>
+          <Icon name='logo-blanc' height={114} width={114}/>
         </View>
-          <Button style={LoginStyle.button} onPress={onPressConnect} isLoading={isLoading} >Se connecter</Button>
-      </View>
-
+        <View style={LoginStyle.formContainer}>
+          {!canLog && <Text color={Theme.default.error }>Mauvais identifiant ou mot de passe</Text>}
+          <Input 
+            placeholder='Email'
+            label='Email'
+            errorLabel={formData.mail.errorLabel}
+            onChange={((t) => changeFormData('mail', t))}
+            onBlur={checkMail}
+          />
+          <View style={LoginStyle.inputContainer}>
+            <Input
+              placeholder='Mot de passe'
+              label='Mot de passe'
+              onChange={(t) => changeFormData('password', t)}
+            />
+            <Text style={LoginStyle.forgotLink} color={Theme.default.grey} size={14}>Mot de passe oublié ?</Text>
+          </View>
+            <Button style={LoginStyle.button} onPress={onPressConnect} isLoading={isLoading} >Se connecter</Button>
+        </View>
+        </Pressable>
+        </KeyboardAvoidingView>
     </View>
 
   );
