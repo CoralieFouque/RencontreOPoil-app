@@ -16,7 +16,7 @@ type Props = {
 }
 
 const Home : FunctionComponent<Props> = (props: Props) => {
-  const [animal, setAnimal] = useState<Animal>({});
+  const [animal, setAnimal] = useState<Animal | undefined>();
 
   function fetchOne() : void {
     fetch('http://192.168.255.12:3001/animal/sos')
