@@ -3,32 +3,24 @@ import Theme from '../../../core/theme';
 
 const NavbarComponentStyle = StyleSheet.create({
   container: {
-    height: 103,
+    height: 70,
     width: '100%',
+    elevation: 2,
+    shadowColor: 'red',
+    marginTop: 33
   },
-  topContainer: {
-    height: 33,
-    width: '100%',
-    borderBottomColor: 'rgba(228, 99, 75, 0.4)',
-    borderBottomWidth: 1,
-    shadowOffset:{
-      height:30,
-      width:0
-    },
-    shadowColor: 'blue',
-    shadowOpacity: 1,
-  },
+
   subContainer: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'stretch',
     justifyContent:'center',
-
   },
   pressableIcon: {
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
+
   },
   innerContainer: {
     width: 78,
